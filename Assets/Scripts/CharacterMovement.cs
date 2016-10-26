@@ -48,8 +48,9 @@ public class CharacterMovement : MonoBehaviour
             if (Coins > 0)
             {
                 Instantiate(Coin, other.transform.position + new Vector3(5, 5, 5), other.transform.localRotation);
+                Coins--;
             }
-            Coins--;
+            
             if (Coins <= 0)
             {
                 fly = new Vector3(2000, 2000, 2000);
